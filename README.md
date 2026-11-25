@@ -20,6 +20,12 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Contact form email
+
+The contact form sends messages through SMTP. Copy `.env.example` to `.env.local` for local development and provide the SMTP credentials. In Vercel, add the same variables under **Project Settings → Environment Variables** and redeploy.
+
+For Gmail, use an app password as `SMTP_PASS` (not the account password). Keep SMTP credentials private and never add them to source control.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

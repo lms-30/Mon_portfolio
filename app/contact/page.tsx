@@ -3,7 +3,7 @@
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,13 +16,7 @@ export default function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
-  const isMountedRef = useRef(true);
-
-  useEffect(() => {
-    return () => {
-      isMountedRef.current = false;
-    };
-  }, []);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -35,63 +29,50 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
+    setSubmitError('');
 
     // Validation des champs requis
     if (!formData.name || !formData.email || !formData.message) {
-      if (isMountedRef.current) {
-        setSubmitStatus('error');
-        setIsSubmitting(false);
-      }
+      setSubmitStatus('error');
+      setSubmitError('Vérifiez les champs requis et la longueur du message.');
+      setIsSubmitting(false);
       return;
     }
 
     // Validation de la longueur du message
     if (formData.message.length > 500) {
-      if (isMountedRef.current) {
-        setSubmitStatus('error');
-        setIsSubmitting(false);
-      }
+      setSubmitStatus('error');
+      setSubmitError('Le message ne peut pas dépasser 500 caractères.');
+      setIsSubmitting(false);
       return;
     }
 
     // Envoi réel du message
     try {
-      const formDataToSend = new FormData();
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('email', formData.email);
-      formDataToSend.append('subject', formData.subject);
-      formDataToSend.append('message', formData.message);
-      formDataToSend.append('projectType', formData.projectType);
-
-      // Simulation d'envoi réussi
-      await fetch('/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
-        body: formDataToSend,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       });
+      const result = await response.json().catch(() => null);
 
-      if (isMountedRef.current) {
-        setSubmitStatus('success');
-        setIsSubmitting(false);
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-          projectType: ''
-        });
+      if (!response.ok || result?.success !== true) {
+        throw new Error(result?.error || 'Le message n’a pas pu être envoyé. Réessayez plus tard.');
       }
+
+      setSubmitStatus('success');
+      setIsSubmitting(false);
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        projectType: ''
+      });
     } catch (error) {
-      if (isMountedRef.current) {
-        setSubmitStatus('success'); // Toujours succès pour la démo
-        setIsSubmitting(false);
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-          projectType: ''
-        });
-      }
+      setSubmitStatus('error');
+      setSubmitError(error instanceof Error ? error.message : 'Erreur réseau. Vérifiez votre connexion et réessayez.');
+      setIsSubmitting(false);
     }
   };
 
@@ -331,7 +312,7 @@ export default function Contact() {
                 <div className="mt-4 p-4 bg-red-100 border border-red-300 rounded-lg">
                   <div className="flex items-center text-red-700">
                     <i className="ri-error-warning-line mr-2"></i>
-                    Erreur lors de l'envoi. Vérifiez les champs requis et la longueur du message.
+                    {submitError}
                   </div>
                 </div>
               )}
