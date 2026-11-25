@@ -7,26 +7,26 @@ import Footer from '../../components/Footer';
 export default function Experience() {
   const academicProjects = [
     {
-      title: "1ère Place CTF INSI",
-      organization: "Compétition - INSI",
+      title: "Stage DevSecOps",
+      organization: "RELIA Group",
       location: "Antananarivo, Madagascar",
-      period: "2024",
-      type: "Distinction",
-      description: "Victoire lors de la compétition Capture The Flag organisée par l'Institut National des Sciences de l'Informatique, démontrant des compétences avancées en cybersécurité.",
+      period: "15 sept. – 14 déc. 2026",
+      type: "Stage en cours",
+      description: "Mise en place de chaînes DevSecOps et déploiement d'applications conteneurisées sur VPS OVHcloud.",
       achievements: [
-        "Résolution de challenges de sécurité web et système",
-        "Analyse et exploitation de vulnérabilités",
-        "Techniques de reverse engineering",
-        "Cryptographie et stéganographie appliquées"
+        "Pipelines GitLab CI avec tests, Gitleaks, Semgrep, Trivy et DAST éphémère",
+        "Déploiements blue-green automatisés avec Ansible et Traefik",
+        "Signature d'images avec Cosign et sécurisation des conteneurs",
+        "Travail sur les projets ESSAIE, MAGIA et MIAHY"
       ],
-      technologies: ["Web Security", "System Exploitation", "Cryptography", "Forensics", "Reverse Engineering"],
-      color: "yellow"
+      technologies: ["GitLab CI", "Docker", "Ansible", "Traefik", "Gitleaks", "Semgrep", "Trivy", "Cosign"],
+      color: "blue"
     },
     {
       title: "Infrastructure Zero Trust",
       organization: "Projet Académique - INSI",
       location: "Antananarivo, Madagascar",
-      period: "2024",
+      period: "2025",
       type: "Projet Pratique",
       description: "Déploiement d'une infrastructure réseau Zero Trust avec VPN sécurisé utilisant des technologies modernes de sécurisation.",
       achievements: [
@@ -39,105 +39,102 @@ export default function Experience() {
       color: "blue"
     },
     {
-      title: "Serveurs BDD et Web sécurisés",
+      title: "Pipeline CI/CD DevSecOps – App Reservation",
       organization: "Projet Académique - INSI",
       location: "Antananarivo, Madagascar",
-      period: "2024",
+      period: "2026",
       type: "Projet Pratique",
-      description: "Installation et configuration complète de serveurs de bases de données et serveurs web sous environnement Linux.",
+      description: "Pipeline Jenkins de plus de dix étapes, de la construction de l'application à son déploiement sécurisé.",
       achievements: [
-        "Installation et sécurisation de MySQL et PostgreSQL",
-        "Configuration d'Apache et Nginx avec SSL/TLS",
-        "Mise en place de Ubuntu Server 22.04.5 LTS",
-        "Optimisation des performances et monitoring"
+        "Build Docker multi-stage et contrôles automatisés",
+        "Scans Trivy, Gitleaks, SonarQube et OWASP Dependency-Check",
+        "Publication dans Harbor et signature avec Cosign",
+        "Déploiement Ansible suivi de smoke tests"
       ],
-      technologies: ["MySQL", "PostgreSQL", "Apache", "Nginx", "Ubuntu Server", "SSL/TLS"],
+      technologies: ["Jenkins", "Docker", "Trivy", "SonarQube", "Harbor", "Cosign", "Ansible"],
       color: "green"
     },
     {
-      title: "Pipeline CI/CD avec GitLab",
-      organization: "Projet Personnel",
-      location: "Antananarivo, Madagascar",
-      period: "2024",
-      type: "Auto-formation",
-      description: "Développement d'une chaîne d'intégration et de déploiement continus pour automatiser les processus de développement.",
-      achievements: [
-        "Configuration complète du pipeline GitLab CI/CD",
-        "Automatisation des tests, builds et déploiements",
-        "Intégration de Docker pour la conteneurisation",
-        "Scripts d'automatisation et monitoring du pipeline"
-      ],
-      technologies: ["GitLab CI/CD", "Docker", "YAML", "Shell Script", "Git"],
-      color: "purple"
-    },
-    {
-      title: "Serveur de virtualisation KVM",
+      title: "Déploiement GitOps sur Kubernetes (K3s)",
       organization: "Projet Académique - INSI",
       location: "Antananarivo, Madagascar",
-      period: "2023-2024",
-      type: "Travaux Pratiques",
-      description: "Configuration d'un serveur de virtualisation avec déploiement d'infrastructure simulée multi-VMs.",
+      period: "2026",
+      type: "Projet Pratique",
+      description: "Déploiement d'un site web conteneurisé avec synchronisation GitOps et exposition HTTPS.",
       achievements: [
-        "Déploiement d'infrastructure interne simulée",
-        "Configuration de ponts réseau (bridge), NAT et host-only",
-        "Création de scripts d'automatisation pour les VMs",
-        "Gestion centralisée des ressources virtuelles"
+        "Synchronisation GitHub avec ArgoCD et auto-réparation",
+        "Ingress NGINX et certificats TLS avec cert-manager",
+        "Déploiement de quatre réplicas NGINX",
+        "Diagnostic des problèmes réseau et de ressources sous Linux"
       ],
-      technologies: ["KVM/QEMU", "libvirt", "virt-manager", "Bridge networking", "Shell Script"],
+      technologies: ["K3s", "ArgoCD", "Ingress NGINX", "cert-manager", "Docker Hub"],
       color: "orange"
+    },
+    {
+      title: "1ère place au CTF Data Day",
+      organization: "CTF Data Day",
+      location: "",
+      period: "1ère place",
+      type: "Distinction",
+      description: "Première place collective au CTF Data Day. Participation également au CTF CIRT/MNDPT et à la première édition de la CyberCup Indian Ocean.",
+      achievements: [
+        "Classement final : 1ère place",
+        "Participation au CTF CIRT/MNDPT et à la CyberCup Indian Ocean"
+      ],
+      technologies: ["CTF", "Cybersécurité", "Analyse de vulnérabilités"],
+      color: "yellow"
     }
   ];
 
   const education = [
     {
-      degree: "Licence en Administration réseau et système et bases de données",
-      school: "INSI (Institut National des Sciences de l'Informatique)",
+      degree: "Licence en informatique (en cours)",
+      school: "Institut National Supérieur de l'Informatique (INSI)",
       location: "Antananarivo, Madagascar",
-      period: "2023 - En cours (L2)",
-      description: "Formation spécialisée en administration réseau, sécurité système et gestion de bases de données",
+      period: "2023 – aujourd'hui (L3)",
+      description: "Formation orientée administration systèmes et réseaux, bases de données, cybersécurité et DevSecOps.",
       achievements: [
-        "Projets pratiques en configuration réseau",
-        "Maîtrise des systèmes Linux (Debian, Kali, Parrot OS)",
-        "Formation aux outils de virtualisation",
-        "Apprentissage des technologies de sécurisation"
+        "Projets d'automatisation et de sécurisation de pipelines CI/CD",
+        "Déploiements conteneurisés sur Kubernetes et Linux",
+        "Supervision et audit de sécurité d'infrastructures"
       ],
       courses: [
-        "Administration des réseaux informatiques",
-        "Sécurité des systèmes d'information",
-        "Virtualisation et cloud computing",
-        "Administration des bases de données",
-        "Systèmes d'exploitation Linux",
-        "Protocoles et services réseau"
+        "Administration systèmes Linux et Windows Server",
+        "Réseaux et sécurité des infrastructures",
+        "Conteneurs et orchestration Kubernetes",
+        "Automatisation avec Ansible et scripting Shell",
+        "Intégration continue et DevSecOps",
+        "Supervision et centralisation des journaux"
       ]
     }
   ];
 
   const skills_development = [
     {
-      period: "2023 - Début",
-      title: "Découverte des réseaux",
-      description: "Premiers pas avec Cisco Packet Tracer",
+      period: "2023",
+      title: "Réseaux et systèmes",
+      description: "Bases de l'administration réseau et de Linux",
       icon: "ri-router-line",
       color: "bg-blue-500"
     },
     {
-      period: "2023-2024",
-      title: "Maîtrise de Linux",
-      description: "Administration serveur et sécurité",
+      period: "2024-2025",
+      title: "Infrastructure et sécurité",
+      description: "Virtualisation, services réseau et sécurisation",
       icon: "ri-terminal-line",
       color: "bg-green-500"
     },
     {
-      period: "2024",
-      title: "Virtualisation",
-      description: "KVM, Docker et conteneurisation",
+      period: "2025-2026",
+      title: "Conteneurs et Kubernetes",
+      description: "Docker, K3s et déploiement GitOps",
       icon: "ri-cloud-line",
       color: "bg-purple-500"
     },
     {
-      period: "2024 - Présent",
-      title: "DevOps et automatisation",
-      description: "CI/CD, scripts et orchestration",
+      period: "2026 – aujourd'hui",
+      title: "DevSecOps en entreprise",
+      description: "Pipelines sécurisés et déploiements automatisés en stage",
       icon: "ri-git-branch-line",
       color: "bg-orange-500"
     }
@@ -168,50 +165,49 @@ export default function Experience() {
         <div className="max-w-4xl mx-auto px-6 text-center text-white">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Mon Parcours</h1>
           <p className="text-xl text-gray-200">
-            Une progression constante avec des succès en cybersécurité
+            Formation, projets d'infrastructure et expérience DevSecOps
           </p>
         </div>
       </section>
 
-      {/* CTF Achievement Highlight */}
-      <section className="py-16 bg-gradient-to-r from-yellow-400 to-orange-500">
+      {/* Expériences CTF */}
+      <section className="py-16 bg-gradient-to-r from-cyan-700 to-blue-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center mb-4">
-                  <div className="w-20 h-20 flex items-center justify-center bg-yellow-500 rounded-full mr-4">
-                    <i className="ri-trophy-line text-4xl text-white"></i>
+                  <div className="w-20 h-20 flex items-center justify-center bg-cyan-800 rounded-full mr-4">
+                    <i className="ri-flag-line text-4xl text-white"></i>
                   </div>
                   <div>
-                    <h2 className="text-3xl font-bold text-gray-800">1ère Place CTF INSI</h2>
-                    <p className="text-lg text-gray-600">Champion Capture The Flag 2024</p>
+                    <h2 className="text-3xl font-bold text-gray-800">1ère place au CTF Data Day</h2>
+                    <p className="text-lg text-gray-600">Distinction en cybersécurité</p>
                   </div>
                 </div>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Victoire lors de la compétition de cybersécurité organisée par l'INSI. Cette réussite 
-                  témoigne de mes compétences en analyse de vulnérabilités, exploitation de failles de 
-                  sécurité, et résolution de challenges techniques complexes.
+                  Nous avons terminé premiers au CTF Data Day. J'ai également participé au CTF CIRT/MNDPT à
+                  Antananarivo et à la première édition de la CyberCup Indian Ocean.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">
-                    Web Security
+                    1ère place
                   </span>
                   <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
-                    System Exploitation
+                    Cybersécurité
                   </span>
                   <span className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">
-                    Cryptography
+                    Data Day
                   </span>
                   <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">
-                    Forensics
+                    CyberCup
                   </span>
                 </div>
               </div>
               <div className="text-center lg:text-right">
                 <img
-                  src="https://readdy.ai/api/search-image?query=Cybersecurity%20CTF%20competition%20victory%20celebration%20with%20trophy%20and%20certificates%2C%20technical%20achievement%20in%20information%20security%2C%20student%20success%20in%20capture%20the%20flag%20challenge%20with%20networking%20and%20computer%20security%20elements&width=400&height=300&seq=ctf-victory&orientation=landscape"
-                  alt="CTF Victory"
+                  src="https://readdy.ai/api/search-image?query=students%20participating%20in%20a%20cybersecurity%20capture%20the%20flag%20competition%20working%20at%20computers%20in%20Antananarivo%20Madagascar&width=400&height=300&seq=ctf-participation&orientation=landscape"
+                  alt="Participation à des compétitions de cybersécurité"
                   className="w-full max-w-md mx-auto rounded-xl shadow-lg"
                 />
               </div>
@@ -281,7 +277,7 @@ export default function Experience() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16">
-            Projets Académiques et Personnels
+            Expériences et projets
           </h2>
 
           <div className="relative">
@@ -298,10 +294,12 @@ export default function Experience() {
                     <div>
                       <h3 className="text-2xl font-bold text-gray-800 mb-1">{project.title}</h3>
                       <h4 className="text-lg font-semibold text-blue-600 mb-1">{project.organization}</h4>
-                      <p className="text-gray-600 flex items-center">
-                        <i className="ri-map-pin-line w-4 h-4 flex items-center justify-center mr-1"></i>
-                        {project.location}
-                      </p>
+                      {project.location && (
+                        <p className="text-gray-600 flex items-center">
+                          <i className="ri-map-pin-line w-4 h-4 flex items-center justify-center mr-1"></i>
+                          {project.location}
+                        </p>
+                      )}
                     </div>
                     <div className="mt-2 md:mt-0 text-right">
                       <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
@@ -379,19 +377,19 @@ export default function Experience() {
               <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-lg mb-4">
                 <i className="ri-graduation-cap-line text-xl text-blue-600"></i>
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">Court terme (2024-2025)</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">Axes actuels</h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start">
                   <i className="ri-arrow-right-s-line text-blue-500 mr-1 mt-0.5"></i>
-                  Finaliser ma Licence 2 avec mention
+                  Approfondir le DevSecOps et la sécurité des pipelines
                 </li>
                 <li className="flex items-start">
                   <i className="ri-arrow-right-s-line text-blue-500 mr-1 mt-0.5"></i>
-                  Obtenir la certification Cisco CCNA
+                  Automatiser les déploiements d'infrastructure
                 </li>
                 <li className="flex items-start">
                   <i className="ri-arrow-right-s-line text-blue-500 mr-1 mt-0.5"></i>
-                  Approfondir les compétences DevOps
+                  Renforcer la supervision et la sécurité Kubernetes
                 </li>
               </ul>
             </div>
@@ -400,19 +398,19 @@ export default function Experience() {
               <div className="w-12 h-12 flex items-center justify-center bg-green-100 rounded-lg mb-4">
                 <i className="ri-briefcase-line text-xl text-green-600"></i>
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">Long terme (2025+)</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">Prochaines étapes</h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start">
                   <i className="ri-arrow-right-s-line text-green-500 mr-1 mt-0.5"></i>
-                  Obtenir un stage en entreprise
+                  Terminer ma Licence en informatique
                 </li>
                 <li className="flex items-start">
                   <i className="ri-arrow-right-s-line text-green-500 mr-1 mt-0.5"></i>
-                  Spécialisation en sécurité réseau
+                  Continuer à développer des infrastructures fiables et sécurisées
                 </li>
                 <li className="flex items-start">
                   <i className="ri-arrow-right-s-line text-green-500 mr-1 mt-0.5"></i>
-                  Poursuivre en Master cybersécurité
+                  Approfondir l'automatisation et l'orchestration
                 </li>
               </ul>
             </div>

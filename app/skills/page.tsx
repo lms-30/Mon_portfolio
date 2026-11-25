@@ -6,15 +6,9 @@ import Footer from '../../components/Footer';
 import { useEffect, useState } from 'react';
 
 export default function Skills() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
   const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set());
-  const [hoveredProgress, setHoveredProgress] = useState<string | null>(null);
 
   useEffect(() => {
-    setIsVisible(true);
-
-    // Animation séquentielle des cartes
     const timer = setTimeout(() => {
       skillCategories.forEach((_, index) => {
         setTimeout(() => {
@@ -28,93 +22,51 @@ export default function Skills() {
 
   const skillCategories = [
     {
-      title: "Réseaux - Bases",
+      title: "Réseaux et sécurité",
       icon: "ri-router-line",
       color: "blue",
-      skills: [
-        { name: "Configuration IP", level: 60 },
-        { name: "Routage de base", level: 55 },
-        { name: "DHCP", level: 65 },
-        { name: "DNS", level: 58 },
-        { name: "NAT", level: 52 },
-        { name: "Cisco Packet Tracer", level: 62 }
-      ]
+      skills: ["Cisco", "VLAN", "OSPF", "RIP", "EIGRP", "pfSense", "OPNsense", "OpenVPN", "CrowdSec", "Snort", "Nessus Essentials"]
     },
     {
-      title: "Systèmes - Bases",
+      title: "Systèmes et virtualisation",
       icon: "ri-computer-line",
       color: "green",
-      skills: [
-        { name: "Linux Ubuntu", level: 58 },
-        { name: "Administration utilisateurs", level: 55 },
-        { name: "Services de base", level: 50 },
-        { name: "Terminal/Shell", level: 60 },
-        { name: "Installation système", level: 65 },
-        { name: "Configuration réseau", level: 52 }
-      ]
+      skills: ["Linux", "Windows Server", "KVM", "VMware", "VirtualBox", "Proxmox", "LVM", "Shell scripting"]
     },
     {
-      title: "Sécurité - Initiation",
+      title: "DevSecOps et CI/CD",
       icon: "ri-shield-line",
       color: "red",
-      skills: [
-        { name: "Concepts sécurité", level: 45 },
-        { name: "Pare-feu basique", level: 40 },
-        { name: "Analyse logs", level: 48 },
-        { name: "CTF - Challenges", level: 65 },
-        { name: "Vulnérabilités web", level: 42 },
-        { name: "Cryptographie base", level: 38 }
-      ]
+      skills: ["Jenkins", "GitLab CI", "SonarQube", "Gitleaks", "Trivy", "Semgrep", "OWASP Dependency-Check", "Harbor", "Cosign"]
     },
     {
-      title: "Virtualisation - Découverte",
+      title: "Conteneurs et orchestration",
       icon: "ri-cloud-line",
       color: "purple",
-      skills: [
-        { name: "VirtualBox", level: 55 },
-        { name: "Docker basics", level: 45 },
-        { name: "VM Configuration", level: 50 },
-        { name: "Réseaux virtuels", level: 48 },
-        { name: "KVM/QEMU", level: 40 },
-        { name: "Gestion ressources", level: 42 }
-      ]
+      skills: ["Docker", "Docker Compose", "Kubernetes (K3s)", "ArgoCD", "Ingress NGINX", "cert-manager", "Docker Hub"]
     },
     {
-      title: "Bases de Données - Fondamentaux",
+      title: "Services et infrastructure",
       icon: "ri-database-line",
       color: "orange",
-      skills: [
-        { name: "MySQL basics", level: 50 },
-        { name: "Requêtes SQL", level: 55 },
-        { name: "Installation BDD", level: 58 },
-        { name: "Sauvegarde simple", level: 45 },
-        { name: "Gestion utilisateurs", level: 42 },
-        { name: "Configuration base", level: 48 }
-      ]
+      skills: ["Active Directory", "Postfix", "Dovecot", "Roundcube", "Nextcloud", "Asterisk", "FreeRADIUS"]
     },
     {
-      title: "Outils et Technologies",
+      title: "Supervision et observabilité",
       icon: "ri-tools-line",
       color: "teal",
-      skills: [
-        { name: "Git/GitLab", level: 52 },
-        { name: "Documentation", level: 60 },
-        { name: "Scripts bash simples", level: 45 },
-        { name: "Monitoring basique", level: 40 },
-        { name: "Dépannage réseau", level: 55 },
-        { name: "Wireshark basics", level: 48 }
-      ]
+      skills: ["Zabbix", "NtopNG", "Prometheus", "Grafana", "Grafana Loki"]
     }
   ];
 
   const getColorClasses = (color: string) => {
     const colors = {
-      blue: { bg: "bg-blue-100", text: "text-blue-600", progress: "bg-blue-600" },
-      red: { bg: "bg-red-100", text: "text-red-600", progress: "bg-red-600" },
-      green: { bg: "bg-green-100", text: "text-green-600", progress: "bg-green-600" },
-      purple: { bg: "bg-purple-100", text: "text-purple-600", progress: "bg-purple-600" },
-      orange: { bg: "bg-orange-100", text: "text-orange-600", progress: "bg-orange-600" },
-      teal: { bg: "bg-teal-100", text: "text-teal-600", progress: "bg-teal-600" }
+      blue: { bg: "bg-blue-100", text: "text-blue-600" },
+      red: { bg: "bg-red-100", text: "text-red-600" },
+      green: { bg: "bg-green-100", text: "text-green-600" },
+      purple: { bg: "bg-purple-100", text: "text-purple-600" },
+      orange: { bg: "bg-orange-100", text: "text-orange-600" },
+      teal: { bg: "bg-teal-100", text: "text-teal-600" }
     };
     return colors[color as keyof typeof colors];
   };
@@ -137,10 +89,10 @@ export default function Skills() {
               key={i}
               className="absolute w-2 h-2 bg-white/20 rounded-full animate-pulse"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
+                left: `${(i * 37 + 11) % 100}%`,
+                top: `${(i * 53 + 7) % 100}%`,
+                animationDelay: `${(i % 5) * 0.4}s`,
+                animationDuration: `${2 + (i % 4) * 0.5}s`
               }}
             />
           ))}
@@ -151,28 +103,27 @@ export default function Skills() {
             Mes Compétences
           </h1>
           <p className="text-xl text-gray-200 animate-fade-in-up animation-delay-300">
-            Compétences fondamentales en administration réseau et système
+            Technologies pratiquées en administration systèmes, réseaux et DevSecOps
           </p>
         </div>
       </section>
 
-      {/* CTF Achievement Section avec animation bounce */}
-      <section className="py-16 bg-gradient-to-r from-yellow-400 to-orange-500">
+      {/* Compétitions et sécurité */}
+      <section className="py-16 bg-gradient-to-r from-slate-700 to-cyan-800">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl transform hover:scale-105 transition-all duration-500 hover:shadow-2xl animate-bounce-in">
             <div className="flex items-center justify-center mb-4">
-              <div className="w-16 h-16 flex items-center justify-center bg-yellow-500 rounded-full mr-4 animate-pulse hover:animate-spin transition-all duration-300">
-                <i className="ri-trophy-line text-3xl text-white"></i>
+              <div className="w-16 h-16 flex items-center justify-center bg-slate-800 rounded-full mr-4">
+                <i className="ri-flag-line text-3xl text-white"></i>
               </div>
               <div className="text-left">
-                <h2 className="text-3xl font-bold text-gray-800 animate-fade-in-right">1ère Place CTF INSI</h2>
-                <p className="text-lg text-gray-600 animate-fade-in-right animation-delay-200">Capture The Flag - Compétition de cybersécurité</p>
+                <h2 className="text-3xl font-bold text-gray-800 animate-fade-in-right">1ère place au CTF Data Day</h2>
+                <p className="text-lg text-gray-600 animate-fade-in-right animation-delay-200">Distinction en cybersécurité</p>
               </div>
             </div>
             <p className="text-gray-700 leading-relaxed animate-fade-in-up animation-delay-400">
-              Victoire lors de la compétition CTF organisée par l'INSI, démontrant mes compétences
-              en résolution de challenges de sécurité informatique, analyse de vulnérabilités et
-              exploitation de failles de sécurité dans un environnement contrôlé.
+              Nous avons terminé premiers au CTF Data Day. J'ai également participé au CTF CIRT/MNDPT et à la CyberCup Indian Ocean.
+              Mes projets comprennent également l'audit de serveurs avec Nessus Essentials et la centralisation des journaux avec Grafana Loki.
             </p>
           </div>
         </div>
@@ -202,84 +153,13 @@ export default function Skills() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div
-                      key={skillIndex}
-                      className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 hover:shadow-2xl transition-all duration-500 hover:border-blue-200 cursor-pointer animate-slide-in-left"
-                      style={{
-                        animationDelay: `${(categoryIndex * 300) + (skillIndex * 100)}ms`,
-                        animationFillMode: 'both'
-                      }}
-                      onMouseEnter={() => {
-                        setHoveredSkill(`${categoryIndex}-${skillIndex}`);
-                        setHoveredProgress(`${categoryIndex}-${skillIndex}`);
-                      }}
-                      onMouseLeave={() => {
-                        setHoveredSkill(null);
-                        setHoveredProgress(null);
-                      }}
+                  {category.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="bg-white px-5 py-3 rounded-lg shadow-sm border border-gray-200 text-gray-700 font-medium animate-slide-in-left"
                     >
-                      <div className="flex justify-between items-center mb-3">
-                        <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-300 hover:text-blue-600">
-                          {skill.name}
-                        </h3>
-                        <span className={`text-sm font-medium transition-all duration-300 ${
-                          hoveredSkill === `${categoryIndex}-${skillIndex}`
-                            ? `${colorClasses.text} font-bold text-lg transform scale-110`
-                            : 'text-gray-600'
-                        }`}>
-                          {hoveredProgress === `${categoryIndex}-${skillIndex}` ? Math.min(skill.level + 15, 100) : skill.level}%
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden hover:h-4 transition-all duration-300">
-                        <div
-                          className={`h-full rounded-full ${colorClasses.progress} transition-all duration-700 ease-out relative overflow-hidden hover:shadow-lg`}
-                          style={{
-                            width: isVisible
-                              ? hoveredProgress === `${categoryIndex}-${skillIndex}`
-                                ? `${Math.min(skill.level + 15, 100)}%`
-                                : `${skill.level}%`
-                              : '0%',
-                            transitionDelay: `${(categoryIndex * 200) + (skillIndex * 100)}ms`
-                          }}
-                        >
-                          {/* Effet de brillance qui passe sur la barre */}
-                          <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent ${
-                            hoveredProgress === `${categoryIndex}-${skillIndex}` ? 'animate-shimmer-fast' : 'animate-shimmer'
-                          }`}></div>
-
-                          {/* Particules animées sur hover */}
-                          {hoveredProgress === `${categoryIndex}-${skillIndex}` && (
-                            <>
-                              {[...Array(3)].map((_, i) => (
-                                <div
-                                  key={i}
-                                  className="absolute w-1 h-1 bg-white rounded-full animate-bounce"
-                                  style={{
-                                    right: `${10 + i * 15}%`,
-                                    top: '25%',
-                                    animationDelay: `${i * 0.2}s`,
-                                    animationDuration: '0.8s'
-                                  }}
-                                />
-                              ))}
-                            </>
-                          )}
-                        </div>
-                      </div>
-
-                      {/* Indicateur de progression animé */}
-                      {hoveredSkill === `${categoryIndex}-${skillIndex}` && (
-                        <div className="mt-2 flex items-center justify-between animate-fade-in">
-                          <span className="text-xs text-gray-500">
-                            {skill.level < 50 ? 'Niveau débutant' : skill.level < 70 ? 'Niveau intermédiaire' : 'Niveau avancé'}
-                          </span>
-                          <span className="text-xs text-green-600 font-medium animate-pulse">
-                            +15% sur focus
-                          </span>
-                        </div>
-                      )}
-                    </div>
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -288,20 +168,20 @@ export default function Skills() {
         </div>
       </section>
 
-      {/* Formation et objectifs avec animations staggered */}
+      {/* Formation et pratique */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 animate-fade-in-up">
-            Formation et Objectifs
+            Formation et Pratique
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: "ri-graduation-cap-line", title: "Licence 2 en cours", desc: "Administration réseau et système - INSI", badge: "2024", color: "blue" },
-              { icon: "ri-award-line", title: "Cisco CCNA", desc: "Certification réseau visée", badge: "Objectif 2024", color: "green" },
-              { icon: "ri-shield-check-line", title: "CompTIA Security+", desc: "Certification sécurité envisagée", badge: "Objectif 2025", color: "red" },
-              { icon: "ri-cloud-line", title: "VMware vSphere", desc: "Spécialisation virtualisation", badge: "Futur", color: "purple" },
-              { icon: "ri-database-2-line", title: "Oracle DBA", desc: "Administration bases de données", badge: "Futur", color: "orange" },
-              { icon: "ri-git-branch-line", title: "DevOps", desc: "CI/CD et automatisation", badge: "En cours", color: "teal" }
+              { icon: "ri-graduation-cap-line", title: "Licence en informatique", desc: "Institut National Supérieur de l'Informatique", badge: "L3 en cours", color: "blue" },
+              { icon: "ri-git-branch-line", title: "Stage DevSecOps", desc: "Pipelines CI/CD et déploiement applicatif", badge: "RELIA Group · 2026", color: "green" },
+              { icon: "ri-shield-check-line", title: "Sécurité CI/CD", desc: "Analyse de code, secrets et vulnérabilités", badge: "Pratique", color: "red" },
+              { icon: "ri-cloud-line", title: "Kubernetes et GitOps", desc: "K3s, ArgoCD et Ingress NGINX", badge: "Projets 2026", color: "purple" },
+              { icon: "ri-server-line", title: "Infrastructure", desc: "Linux, conteneurs et automatisation Ansible", badge: "Pratique", color: "orange" },
+              { icon: "ri-bar-chart-line", title: "Observabilité", desc: "Zabbix, Prometheus, Grafana et Loki", badge: "Pratique", color: "teal" }
             ].map((item, index) => (
               <div
                 key={index}
@@ -331,18 +211,18 @@ export default function Skills() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {[
-              { name: "Cisco Packet Tracer", icon: "ri-router-line", color: "bg-blue-600" },
-              { name: "Wireshark", icon: "ri-radar-line", color: "bg-green-600" },
-              { name: "pfSense", icon: "ri-shield-line", color: "bg-red-600" },
+              { name: "Ansible", icon: "ri-terminal-box-line", color: "bg-blue-600" },
+              { name: "GitLab CI", icon: "ri-git-branch-line", color: "bg-green-600" },
+              { name: "Trivy", icon: "ri-shield-line", color: "bg-red-600" },
               { name: "Docker", icon: "ri-cloud-line", color: "bg-cyan-600" },
-              { name: "VirtualBox", icon: "ri-computer-line", color: "bg-purple-600" },
-              { name: "KVM/QEMU", icon: "ri-server-line", color: "bg-orange-600" },
-              { name: "MySQL", icon: "ri-database-line", color: "bg-yellow-600" },
-              { name: "Apache", icon: "ri-global-line", color: "bg-pink-600" },
-              { name: "Nginx", icon: "ri-window-line", color: "bg-indigo-600" },
-              { name: "GitLab", icon: "ri-git-branch-line", color: "bg-teal-600" },
-              { name: "Snort", icon: "ri-bug-line", color: "bg-red-700" },
-              { name: "OpenVPN", icon: "ri-shield-keyhole-line", color: "bg-gray-600" }
+              { name: "K3s", icon: "ri-computer-line", color: "bg-purple-600" },
+              { name: "ArgoCD", icon: "ri-server-line", color: "bg-orange-600" },
+              { name: "Harbor", icon: "ri-database-line", color: "bg-yellow-600" },
+              { name: "Cosign", icon: "ri-shield-check-line", color: "bg-pink-600" },
+              { name: "Grafana", icon: "ri-bar-chart-line", color: "bg-indigo-600" },
+              { name: "Prometheus", icon: "ri-pulse-line", color: "bg-teal-600" },
+              { name: "CrowdSec", icon: "ri-shield-keyhole-line", color: "bg-red-700" },
+              { name: "Nessus", icon: "ri-search-eye-line", color: "bg-gray-600" }
             ].map((tool, index) => (
               <div
                 key={index}

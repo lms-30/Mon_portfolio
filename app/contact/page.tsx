@@ -133,8 +133,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">Email</h3>
-                    <a href="mailto:lahinirikomarasylvain30@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">
-                      lahinirikomarasylvain30@gmail.com
+                    <a href="mailto:lms30062004@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">
+                      lms30062004@gmail.com
                     </a>
                   </div>
                 </div>
@@ -145,8 +145,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">Téléphone</h3>
-                    <a href="tel:+261346238112" className="text-gray-600 hover:text-green-600 transition-colors cursor-pointer">
-                      +261 34 62 381 12
+                    <a href="tel:+261347130833" className="text-gray-600 hover:text-green-600 transition-colors cursor-pointer">
+                      +261 34 71 308 33
+                    </a>
+                    <br />
+                    <a href="tel:+261330879137" className="text-gray-600 hover:text-green-600 transition-colors cursor-pointer">
+                      +261 33 08 791 37
                     </a>
                   </div>
                 </div>
@@ -157,8 +161,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">Adresse</h3>
-                    <p className="text-gray-600">Lot VVV 45 ter D, Amparihy</p>
-                    <p className="text-gray-600">101 Antananarivo, Madagascar</p>
+                    <p className="text-gray-600">Antananarivo, Madagascar</p>
                   </div>
                 </div>
                 
@@ -168,7 +171,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">Formation</h3>
-                    <p className="text-gray-600">Étudiant en Licence 2 - INSI</p>
+                    <p className="text-gray-600">Étudiant en Licence 3 - INSI</p>
                   </div>
                 </div>
               </div>
@@ -390,8 +393,8 @@ export default function Contact() {
                 Avez-vous participé à des CTF ?
               </h3>
               <p className="text-gray-600">
-                Oui ! J'ai remporté la 1ère place au CTF organisé par l'INSI. C'est une excellente 
-                façon d'apprendre la cybersécurité de manière pratique et ludique.
+                  Nous avons terminé premiers au CTF Data Day. J'ai également participé au CTF CIRT/MNDPT et à la première
+                  édition de la CyberCup Indian Ocean.
               </p>
             </div>
           </div>

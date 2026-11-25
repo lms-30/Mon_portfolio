@@ -20,7 +20,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-6 text-center text-white">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">À propos de moi</h1>
           <p className="text-xl text-gray-200">
-            Découvrez mon parcours d'étudiant en Administration réseau et système
+            Licence 3 informatique, administration systèmes, réseaux et DevSecOps
           </p>
         </div>
       </section>
@@ -34,19 +34,17 @@ export default function About() {
                 Mon parcours
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Étudiant en Licence 2 à l'INSI (Institut National des Sciences de l'Informatique), 
-                je me passionne pour l'administration réseau, les systèmes et la cybersécurité. 
-                Originaire d'Antananarivo, Madagascar, j'ai choisi cette voie par curiosité pour les technologies.
+                Étudiant en Licence 3 à l'Institut National Supérieur de l'Informatique (INSI),
+                je me spécialise en administration systèmes et réseaux, cybersécurité et DevSecOps.
+                Je poursuis ma formation à Antananarivo, Madagascar.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Mon apprentissage se base sur une approche pratique : simulation de réseaux, 
-                configuration de serveurs Linux, déploiement d'infrastructures sécurisées. 
-                J'aime comprendre le fonctionnement des systèmes en profondeur.
+                Mon parcours associe projets académiques et expérience en entreprise. En stage chez RELIA Group,
+                je travaille sur la sécurisation de pipelines CI/CD et le déploiement d'applications conteneurisées.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                Autonome et curieux, je consacre beaucoup de temps aux projets personnels 
-                pour approfondir mes connaissances et rester à jour avec les dernières technologies 
-                en matière de sécurité et d'infrastructure.
+                J'utilise notamment Docker, Kubernetes, Ansible et des outils d'analyse de sécurité comme Trivy,
+                Gitleaks et Semgrep, ainsi que des outils de supervision comme Prometheus, Grafana et Loki.
               </p>
             </div>
             <div className="relative">
@@ -73,7 +71,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Réseaux</h3>
               <p className="text-gray-600">
-                VLAN, ACL, NAT, DHCP, DNS, routage OSPF/EIGRP/RIP avec Cisco Packet Tracer
+                Cisco, VLAN, OSPF, RIP, EIGRP, pfSense et OPNsense
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
@@ -82,7 +80,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Sécurité</h3>
               <p className="text-gray-600">
-                IDS/IPS avec Snort, configuration de pare-feux, journalisation et règles de sécurité
+                Snort, CrowdSec, Nessus Essentials, Gitleaks, Trivy et sécurité des pipelines
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
@@ -91,7 +89,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Virtualisation</h3>
               <p className="text-gray-600">
-                KVM/QEMU, VirtualBox, Docker et Docker Compose pour le déploiement d'applications
+                Docker, Kubernetes K3s, Proxmox, VMware, KVM et Docker Compose
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
@@ -100,7 +98,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Bases de données</h3>
               <p className="text-gray-600">
-                Administration MySQL, gestion des données et optimisation des performances
+                Active Directory, Postfix, Dovecot, Roundcube, Nextcloud, Asterisk et FreeRADIUS
               </p>
             </div>
           </div>
@@ -119,28 +117,28 @@ export default function About() {
                 <i className="ri-ubuntu-line text-3xl text-orange-600"></i>
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Linux</h3>
-              <p className="text-gray-600 text-sm">Debian, Kali, Parrot OS, administration serveur</p>
+              <p className="text-gray-600 text-sm">Linux, Windows Server, scripting Shell</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 flex items-center justify-center bg-blue-100 rounded-full mx-auto mb-4">
                 <i className="ri-cloud-line text-3xl text-blue-600"></i>
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Virtualisation</h3>
-              <p className="text-gray-600 text-sm">KVM/QEMU, VirtualBox, Docker</p>
+              <p className="text-gray-600 text-sm">KVM, VMware, VirtualBox, Proxmox, Docker</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 flex items-center justify-center bg-green-100 rounded-full mx-auto mb-4">
                 <i className="ri-links-line text-3xl text-green-600"></i>
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Réseau</h3>
-              <p className="text-gray-600 text-sm">Cisco Packet Tracer, Wireshark, pfSense</p>
+              <p className="text-gray-600 text-sm">Cisco, pfSense, OPNsense, OpenVPN</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 flex items-center justify-center bg-purple-100 rounded-full mx-auto mb-4">
                 <i className="ri-shield-check-line text-3xl text-purple-600"></i>
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Sécurité</h3>
-              <p className="text-gray-600 text-sm">Snort IDS/IPS, OpenVPN, FreeRADIUS</p>
+              <p className="text-gray-600 text-sm">Snort, CrowdSec, Nessus Essentials, FreeRADIUS</p>
             </div>
           </div>
         </div>
@@ -153,31 +151,30 @@ export default function About() {
             Mes objectifs
           </h2>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            Mon objectif est de devenir un expert en administration réseau et cybersécurité. 
-            Je souhaite contribuer à la sécurisation des infrastructures informatiques et 
-            développer des solutions innovantes pour protéger les données et les systèmes.
+            Je souhaite continuer à concevoir, automatiser et sécuriser des infrastructures et des déploiements
+            applicatifs, en approfondissant les pratiques DevSecOps et l'orchestration Kubernetes.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mx-auto mb-4">
                 <i className="ri-graduation-cap-line text-2xl text-blue-600"></i>
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Finir ma Licence</h3>
-              <p className="text-gray-600 text-sm">Obtenir ma licence en Administration réseau et système</p>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Licence en informatique</h3>
+              <p className="text-gray-600 text-sm">Formation en cours à l'INSI</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 flex items-center justify-center bg-green-100 rounded-full mx-auto mb-4">
                 <i className="ri-certificate-line text-2xl text-green-600"></i>
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Certifications</h3>
-              <p className="text-gray-600 text-sm">Obtenir des certifications réseau et sécurité</p>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">DevSecOps</h3>
+              <p className="text-gray-600 text-sm">Renforcer la sécurité tout au long du cycle CI/CD</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 flex items-center justify-center bg-purple-100 rounded-full mx-auto mb-4">
                 <i className="ri-briefcase-line text-2xl text-purple-600"></i>
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Expérience</h3>
-              <p className="text-gray-600 text-sm">Acquérir de l'expérience professionnelle</p>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Infrastructure</h3>
+              <p className="text-gray-600 text-sm">Automatisation, Kubernetes et observabilité</p>
             </div>
           </div>
         </div>

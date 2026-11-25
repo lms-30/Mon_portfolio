@@ -22,7 +22,7 @@ export default function Home() {
             Salut, je suis <span className="text-cyan-400">Lahiniriko Mara Sylvain</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200">
-            Étudiant en Administration réseau et système et base de données passionné par la cybersécurité et la virtualisation
+            Étudiant en Licence 3 informatique, orienté administration systèmes, réseaux et DevSecOps
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -50,12 +50,12 @@ export default function Home() {
                 À propos de moi
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Étudiant en Licence 2 à l'INSI, je suis passionné par les réseaux, la cybersécurité et la virtualisation. 
-                Curieux et autonome, je travaille sur des projets pratiques comme la simulation de réseaux et la configuration de serveurs Linux.
+                Étudiant en Licence 3 à l'INSI, je me spécialise en administration systèmes et réseaux, cybersécurité et DevSecOps.
+                J'ai récemment mis en pratique ces compétences en stage et sur des projets d'infrastructure et de déploiement.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                J'ai des compétences en sécurisation (IDS/IPS) et j'utilise des outils comme Docker, KVM, Packet Tracer. 
-                Je me spécialise dans les services DNS, DHCP, VPN et l'infrastructure Zero Trust.
+                J'automatise des pipelines CI/CD sécurisés et des déploiements Kubernetes avec Jenkins, GitLab CI, Ansible,
+                Trivy, Gitleaks, Cosign et ArgoCD.
               </p>
               <Link
                 href="/about"
@@ -87,21 +87,21 @@ export default function Home() {
                 <i className="ri-router-line text-2xl text-blue-600"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Réseaux</h3>
-              <p className="text-gray-600">VLAN, ACL, NAT, DHCP, DNS, Routage OSPF/EIGRP</p>
+              <p className="text-gray-600">Cisco, VLAN, OSPF, RIP, EIGRP, pfSense, OPNsense</p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
               <div className="w-16 h-16 flex items-center justify-center bg-green-100 rounded-full mx-auto mb-6">
                 <i className="ri-shield-line text-2xl text-green-600"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Sécurité</h3>
-              <p className="text-gray-600">IDS/IPS Snort, pare-feux, Zero Trust, VPN</p>
+              <p className="text-gray-600">Snort, CrowdSec, Nessus Essentials, Gitleaks, Trivy</p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
               <div className="w-16 h-16 flex items-center justify-center bg-purple-100 rounded-full mx-auto mb-6">
                 <i className="ri-server-line text-2xl text-purple-600"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Virtualisation</h3>
-              <p className="text-gray-600">KVM/QEMU, Docker, VirtualBox, Linux</p>
+              <p className="text-gray-600">Docker, Kubernetes K3s, Proxmox, VMware, KVM</p>
             </div>
           </div>
           <div className="text-center mt-12">
@@ -124,22 +124,22 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[ 
               {
-                title: "Infrastructure Zero Trust",
-                description: "Déploiement d'une infrastructure réseau Zero Trust avec VPN sécurisé",
+                title: "Pipelines DevSecOps en production",
+                description: "Sécurisation et déploiement blue-green de services web avec CI/CD, Docker et Ansible.",
                 image: "https://readdy.ai/api/search-image?query=Zero%20Trust%20network%20architecture%20diagram%20with%20security%20layers%2C%20VPN%20connections%2C%20network%20security%20infrastructure%2C%20pfSense%20firewall%20configuration%2C%20modern%20cybersecurity%20visualization%20with%20interconnected%20security%20elements%20and%20protected%20network%20zones&width=400&height=300&seq=project-zerotrust&orientation=landscape",
-                tech: ["OpenVPN", "FreeRADIUS", "Squid Proxy", "pfSense"]
+                tech: ["GitLab CI", "Docker", "Ansible", "Traefik"]
               },
               {
-                title: "Serveurs BDD et Web sécurisés",
-                description: "Installation et configuration de serveurs MySQL, PostgreSQL et Apache/Nginx",
+                title: "Déploiement GitOps sur Kubernetes",
+                description: "Déploiement d'un site conteneurisé sur K3s avec ArgoCD, ingress et certificats TLS.",
                 image: "https://readdy.ai/api/search-image?query=Database%20server%20configuration%20with%20MySQL%20and%20PostgreSQL%20interfaces%2C%20web%20server%20setup%20with%20Apache%20and%20Nginx%2C%20Ubuntu%20server%20administration%20dashboard%2C%20secure%20database%20management%20environment%20with%20professional%20server%20monitoring%20tools&width=400&height=300&seq=project-database&orientation=landscape",
-                tech: ["MySQL", "PostgreSQL", "Apache/Nginx", "Ubuntu Server"]
+                tech: ["K3s", "ArgoCD", "Ingress NGINX", "cert-manager"]
               },
               {
-                title: "CI/CD avec GitLab",
-                description: "Pipeline CI/CD complet pour automatiser les tests, build et déploiement",
+                title: "Pipeline CI/CD signé",
+                description: "Chaîne Jenkins avec analyse de sécurité, registre Harbor et signature des images Cosign.",
                 image: "https://readdy.ai/api/search-image?query=GitLab%20CI%2FCD%20pipeline%20visualization%20with%20automated%20testing%20and%20deployment%20stages%2C%20DevOps%20workflow%20diagram%2C%20continuous%20integration%20dashboard%2C%20modern%20software%20development%20automation%20tools%20with%20code%20deployment%20process%20visualization&width=400&height=300&seq=project-cicd&orientation=landscape",
-                tech: ["GitLab", "Docker", "Automation", "Testing"]
+                tech: ["Jenkins", "Harbor", "Cosign", "Trivy"]
               }
             ].map((project, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">

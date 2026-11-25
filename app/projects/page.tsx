@@ -20,81 +20,81 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Infrastructure Zero Trust",
-      description: "Déploiement d'une infrastructure réseau Zero Trust avec VPN sécurisé utilisant OpenVPN, FreeRADIUS, Squid Proxy et pfSense.",
-      longDescription: "Mise en place d'une architecture réseau Zero Trust complète avec authentification multi-facteurs, segmentation réseau, contrôle d'accès granulaire et surveillance continue. Le projet inclut la configuration d'un serveur OpenVPN pour l'accès distant sécurisé, l'intégration de FreeRADIUS pour l'authentification centralisée, le déploiement de Squid Proxy pour le filtrage web et la configuration de pfSense comme pare-feu principal.",
+      title: "Stage DevSecOps chez RELIA Group",
+      description: "Sécurisation des pipelines et déploiement de trois applications conteneurisées en production.",
+      longDescription: "Intervention sur ESSAIE, MAGIA et MIAHY : intégration de contrôles de sécurité dans les pipelines GitLab CI, construction d'images Docker et déploiements blue-green automatisés sur VPS OVHcloud.",
       image: "https://readdy.ai/api/search-image?query=Zero%20Trust%20network%20architecture%20visualization%20with%20security%20layers%2C%20VPN%20tunnel%20connections%2C%20firewall%20configuration%20interface%2C%20network%20segmentation%20diagram%2C%20modern%20cybersecurity%20infrastructure%20with%20authentication%20servers%20and%20access%20control%20systems&width=600&height=400&seq=project-zerotrust-detail&orientation=landscape",
-      category: ["security", "network"],
-      technologies: ["OpenVPN", "FreeRADIUS", "Squid Proxy", "pfSense", "Linux", "SSL/TLS"],
-      features: ["Authentification multi-facteurs", "Segmentation réseau", "VPN site-to-site", "Filtrage web avancé", "Surveillance continue", "Contrôle d'accès granulaire"],
+      category: ["security", "devops"],
+      technologies: ["GitLab CI", "Docker", "Ansible", "Traefik", "Gitleaks", "Semgrep", "Trivy", "Cosign"],
+      features: ["Tests et scans de sécurité", "DAST éphémère", "Déploiement blue-green", "HTTPS avec Let's Encrypt", "Rollback", "Runner GitLab auto-hébergé"],
       github: "https://github.com/lms-30",
-      demo: "https://demo.com",
-      year: "2024"
+      demo: "",
+      year: "2026"
     },
     {
       id: 2,
-      title: "Serveurs BDD et Web sécurisés",
-      description: "Installation et configuration de serveurs MySQL, PostgreSQL et Apache/Nginx sous Ubuntu Server 22.04.5 LTS.",
-      longDescription: "Déploiement et sécurisation d'une infrastructure complète de serveurs de bases de données et web. Configuration de MySQL et PostgreSQL avec chiffrement, sauvegarde automatisée et réplication. Installation d'Apache et Nginx avec SSL/TLS, virtualisation des hôtes et optimisation des performances. Mise en place de monitoring et de systèmes d'alertes.",
+      title: "Pipeline DevSecOps – App Reservation",
+      description: "Pipeline Jenkins de plus de dix étapes, avec scans de sécurité, registre d'images et déploiement automatisé.",
+      longDescription: "Construction multi-stage de l'application, contrôles automatisés avec Trivy, Gitleaks, SonarQube et OWASP Dependency-Check, publication dans Harbor, signature avec Cosign puis déploiement Ansible et smoke tests.",
       image: "https://readdy.ai/api/search-image?query=Secure%20database%20and%20web%20server%20configuration%20with%20MySQL%20PostgreSQL%20interfaces%2C%20Apache%20Nginx%20administration%20panels%2C%20Ubuntu%20server%20terminal%2C%20SSL%20certificates%20setup%2C%20database%20security%20configuration%20screens%20with%20professional%20server%20management%20environment&width=600&height=400&seq=project-database-detail&orientation=landscape",
-      category: ["database", "security"],
-      technologies: ["MySQL", "PostgreSQL", "Apache", "Nginx", "Ubuntu Server 22.04.5", "SSL/TLS"],
-      features: ["Bases de données sécurisées", "Chiffrement des données", "Sauvegarde automatisée", "Load balancing", "SSL/TLS", "Monitoring avancé"],
+      category: ["devops", "security"],
+      technologies: ["Jenkins", "Docker", "Trivy", "Gitleaks", "SonarQube", "Harbor", "Cosign", "Ansible"],
+      features: ["Pipeline de plus de dix étapes", "Build Docker multi-stage", "Scans de dépendances", "Images signées", "Déploiement automatisé", "Smoke tests"],
       github: "https://github.com/lms-30",
-      demo: "https://demo.com",
-      year: "2024"
+      demo: "",
+      year: "2026"
     },
     {
       id: 3,
-      title: "CI/CD avec GitLab",
-      description: "Mise en place d'un pipeline CI/CD complet avec GitLab pour automatiser les tests, le build et le déploiement d'applications.",
-      longDescription: "Développement d'une chaîne d'intégration et de déploiement continus avec GitLab CI/CD. Configuration de runners, création de pipelines multi-étapes avec tests automatisés, build des applications, et déploiement automatique. Intégration de Docker pour la conteneurisation et de Kubernetes pour l'orchestration.",
+      title: "Application Java/PostgreSQL sur Kubernetes",
+      description: "Pipeline Jenkins et déploiement Kubernetes avec analyse de code et supervision Prometheus/Grafana.",
+      longDescription: "Projet académique de chaîne CI/CD pour une application Java avec PostgreSQL : Jenkins, SonarQube et Gitleaks pour les contrôles, Trivy et OWASP Dependency-Check pour les scans, registre Harbor, déploiement Kubernetes via Ansible et supervision Prometheus/Grafana.",
       image: "https://readdy.ai/api/search-image?query=GitLab%20CI%2FCD%20pipeline%20dashboard%20with%20automated%20testing%20stages%2C%20continuous%20integration%20workflow%20visualization%2C%20Docker%20containers%20deployment%2C%20DevOps%20automation%20tools%2C%20code%20quality%20metrics%20and%20deployment%20status%20with%20modern%20software%20development%20interface&width=600&height=400&seq=project-cicd-detail&orientation=landscape",
-      category: ["devops"],
-      technologies: ["GitLab CI/CD", "Docker", "Kubernetes", "Shell Script", "YAML", "Git"],
-      features: ["Pipeline automatisé", "Tests unitaires", "Déploiement continu", "Conteneurisation", "Monitoring pipeline", "Rollback automatique"],
+      category: ["devops", "database"],
+      technologies: ["Jenkins", "Java", "PostgreSQL", "Kubernetes", "Harbor", "Ansible", "Prometheus", "Grafana"],
+      features: ["Analyse SonarQube", "Détection de secrets", "Scans de dépendances", "Déploiement Kubernetes", "Monitoring", "Pipeline automatisé"],
       github: "https://github.com/lms-30",
-      demo: "https://demo.com",
-      year: "2024"
+      demo: "",
+      year: "2026"
     },
     {
       id: 4,
-      title: "Serveur de virtualisation avec KVM",
-      description: "Configuration d'un serveur de virtualisation avec KVM, déploiement d'une infrastructure interne simulée avec plusieurs VMs.",
-      longDescription: "Mise en place d'une infrastructure de virtualisation complète utilisant KVM/QEMU. Configuration de ponts réseau (bridge), NAT et host-only pour différents scénarios de connectivité. Développement de scripts d'automatisation pour la création et le paramétrage réseau des machines virtuelles. Gestion centralisée des ressources et monitoring des performances.",
+      title: "Déploiement GitOps sur Kubernetes (K3s)",
+      description: "Déploiement d'un site conteneurisé avec ArgoCD, Ingress NGINX et certificats TLS automatisés.",
+      longDescription: "Site web conteneurisé publié sur Docker Hub et déployé sur K3s. ArgoCD synchronise l'état depuis GitHub et assure l'auto-réparation; Ingress NGINX expose quatre réplicas NGINX et cert-manager gère les certificats TLS.",
       image: "https://readdy.ai/api/search-image?query=KVM%20virtualization%20server%20management%20interface%20with%20virtual%20machines%20dashboard%2C%20network%20bridge%20configuration%2C%20VM%20resource%20allocation%2C%20hypervisor%20management%20console%20with%20multiple%20running%20virtual%20machines%20and%20network%20topology%20visualization&width=600&height=400&seq=project-kvm-detail&orientation=landscape",
-      category: ["virtualization", "network"],
-      technologies: ["KVM/QEMU", "libvirt", "virt-manager", "Bridge networking", "Shell Script", "Linux"],
-      features: ["Multi-VM deployment", "Network bridges", "Resource management", "Script automation", "Performance monitoring", "Snapshot management"],
+      category: ["virtualization", "devops"],
+      technologies: ["K3s", "Docker", "Docker Hub", "ArgoCD", "Ingress NGINX", "cert-manager"],
+      features: ["Synchronisation GitOps", "Auto-réparation", "Quatre réplicas NGINX", "Ingress", "Certificats TLS", "Diagnostic réseau Linux"],
       github: "https://github.com/lms-30",
-      demo: "https://demo.com",
-      year: "2024"
+      demo: "",
+      year: "2026"
     },
     {
       id: 5,
-      title: "Micro-services avec Docker",
-      description: "Déploiement de micro-services avec Docker, conteneurisation d'outils d'analyse et interface web pour la visualisation de données.",
-      longDescription: "Développement d'une architecture micro-services conteneurisée pour le traitement et l'analyse de données CSV. Création d'un dashboard web pour la visualisation des données avec des graphiques interactifs. Utilisation de Docker Compose pour coordonner plusieurs services et gestion des volumes persistants pour le stockage des données.",
+      title: "Centralisation des journaux et audit serveur",
+      description: "Mise en place de Grafana Loki pour les logs et scan de vulnérabilités avec Nessus Essentials.",
+      longDescription: "Travaux académiques de supervision et de sécurité : centralisation des journaux avec Grafana Loki et audit de serveurs Linux à l'aide de Nessus Essentials.",
       image: "https://readdy.ai/api/search-image?query=Docker%20microservices%20architecture%20with%20containerized%20applications%2C%20data%20visualization%20dashboard%2C%20CSV%20analysis%20tools%20interface%2C%20Docker%20Compose%20configuration%2C%20modern%20web%20dashboard%20with%20charts%20and%20graphs%20for%20data%20analytics&width=600&height=400&seq=project-docker-detail&orientation=landscape",
-      category: ["virtualization", "devops"],
-      technologies: ["Docker", "Docker Compose", "Python", "Flask", "JavaScript", "Chart.js"],
-      features: ["Architecture microservices", "Analyse de données CSV", "Dashboard interactif", "Conteneurisation", "API REST", "Visualisation graphique"],
+      category: ["security", "devops"],
+      technologies: ["Grafana Loki", "Nessus Essentials", "Linux"],
+      features: ["Centralisation des logs", "Analyse de vulnérabilités", "Audit serveur", "Supervision d'infrastructure"],
       github: "https://github.com/lms-30",
-      demo: "https://demo.com",
-      year: "2024"
+      demo: "",
+      year: "2026"
     },
     {
       id: 6,
-      title: "Configuration réseau Cisco",
-      description: "Simulation et configuration d'infrastructures réseau complexes avec Cisco Packet Tracer incluant VLAN, routage et sécurité.",
-      longDescription: "Conception et implémentation d'infrastructures réseau entreprise avec Cisco Packet Tracer. Configuration de VLAN pour la segmentation réseau, mise en place de protocoles de routage OSPF et EIGRP, configuration d'ACL pour la sécurité, et déploiement de services DHCP et DNS. Tests de connectivité et optimisation des performances réseau.",
+      title: "Architecture Zero Trust et services réseau",
+      description: "Projets académiques autour de VPN inter-sites, FreeRADIUS, pare-feu et services Linux.",
+      longDescription: "Réalisation de projets d'infrastructure comprenant une architecture Zero Trust avec OpenVPN, FreeRADIUS et segmentation pfSense, ainsi que des services de messagerie, Active Directory, détection CrowdSec et supervision réseau NtopNG.",
       image: "https://readdy.ai/api/search-image?query=Cisco%20Packet%20Tracer%20network%20simulation%20with%20routers%20switches%20configuration%2C%20VLAN%20setup%2C%20network%20topology%20diagram%2C%20routing%20protocols%20visualization%2C%20enterprise%20network%20infrastructure%20with%20professional%20network%20equipment%20layout&width=600&height=400&seq=project-cisco-detail&orientation=landscape",
-      category: ["network"],
-      technologies: ["Cisco Packet Tracer", "OSPF", "EIGRP", "VLAN", "ACL", "DHCP"],
-      features: ["Topologie complexe", "VLAN segmentation", "Routage dynamique", "Sécurité ACL", "Services réseau", "Tests de performance"],
+      category: ["network", "security"],
+      technologies: ["OpenVPN", "FreeRADIUS", "pfSense", "CrowdSec", "Postfix", "Dovecot", "Active Directory", "NtopNG"],
+      features: ["VPN inter-sites", "Segmentation réseau", "Détection et bannissement", "Messagerie complète", "Gestion de domaine", "Supervision trafic"],
       github: "https://github.com/lms-30",
-      demo: "https://demo.com",
-      year: "2023"
+      demo: "",
+      year: "2025-2026"
     }
   ];
 
@@ -186,18 +186,12 @@ export default function Projects() {
                       Détails
                     </button>
                     <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200 cursor-pointer"
-                    >
-                      <i className="ri-external-link-line text-gray-600"></i>
-                    </a>
-                    <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200 cursor-pointer"
+                      title="Voir le profil GitHub"
+                      aria-label="Voir le profil GitHub"
                     >
                       <i className="ri-github-line text-gray-600"></i>
                     </a>
@@ -267,22 +261,13 @@ export default function Projects() {
               
               <div className="flex gap-4">
                 <a
-                  href={selectedProject.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 cursor-pointer whitespace-nowrap flex items-center"
-                >
-                  <i className="ri-external-link-line mr-2"></i>
-                  Voir la documentation
-                </a>
-                <a
                   href={selectedProject.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 cursor-pointer whitespace-nowrap flex items-center"
                 >
                   <i className="ri-github-line mr-2"></i>
-                  Configuration
+                  Profil GitHub
                 </a>
               </div>
             </div>

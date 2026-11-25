@@ -13,17 +13,11 @@ export default function Footer() {
               Lahiniriko Mara Sylvain
             </h3>
             <p className="text-gray-400 mb-4">
-              Étudiant en Administration réseau et système et bases de données passionné par la cybersécurité et les infrastructures IT.
+              Étudiant en Licence 3 informatique, orienté systèmes, réseaux et DevSecOps.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 flex items-center justify-center bg-blue-600 rounded-full hover:bg-blue-700 transition-colors cursor-pointer">
-                <i className="ri-linkedin-fill text-lg"></i>
-              </a>
-              <a href="https://github.com/lms-30" className="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors cursor-pointer">
+              <a href="https://github.com/lms-30" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub" className="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors cursor-pointer">
                 <i className="ri-github-fill text-lg"></i>
-              </a>
-              <a href="https://www.facebook.com" className="w-10 h-10 flex items-center justify-center bg-blue-400 rounded-full hover:bg-blue-500 transition-colors cursor-pointer">
-                <i className="ri-facebook-fill text-lg"></i>
               </a>
             </div>
           </div>
@@ -44,11 +38,11 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-center">
                 <i className="ri-mail-line w-5 h-5 flex items-center justify-center mr-2"></i>
-                lahinirikomarasylvain30@gmail.com
+                <a href="mailto:lms30062004@gmail.com" className="hover:text-white">lms30062004@gmail.com</a>
               </li>
               <li className="flex items-center">
                 <i className="ri-phone-line w-5 h-5 flex items-center justify-center mr-2"></i>
-                +261 34 62 381 12
+                <a href="tel:+261347130833" className="hover:text-white">+261 34 71 308 33</a>
               </li>
               <li className="flex items-center">
                 <i className="ri-map-pin-line w-5 h-5 flex items-center justify-center mr-2"></i>
@@ -59,7 +53,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Lahiniriko Mara Sylvain. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Lahiniriko Mara Sylvain. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
